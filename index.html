@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <script src="/socket.io/socket.io.js"></script>
+
+    <title>Garrgebara</title>
+</head>
+<body>
+    <div id="preGameScreen">
+        <h1>SPACE GAME</h1>
+        <p>Controls:</p>
+        <p><strong>W</strong> - Up</p>
+        <p><strong>A</strong> - Left</p>
+        <p><strong>S</strong> - Down</p>
+        <p><strong>D</strong> - Right</p>
+        <a href="#" class="button" onclick="startGame()">Start Game</a>
+        <p><strong>Highscore: </strong><span id="highscoreStartSpan">0</span></p>
+        <div id="credits">
+            <!-- Credits tag that takes you to the github page without underline-->
+            <p class="credits">Game made by: <a href="https://github.com/waqzrrqodi/game-js" target="_blank" class="creditsName">Kasper</a></p>
+            <p class="copyRight">© 2023 Kasper</p>
+          </div>
+    </div>
+    <div id="game-container">
+        <canvas id="canvas"></canvas>
+        <div class="gameOverDiv hidden">
+            <h1>Game Over</h1>
+            <h2>Score: <span id="score"></span></h2>
+            <h2> <span id="highscorePromt"></span></h2>
+            <h3 id="restart">To restart press F5</h3>
+        </div>
+        <div id="scoreDiv">
+            <h1>Score: <span id="scoreSpan">0</span></h1>
+            <h3>Highscore: <span id="highScoreSpan">0</span></h3>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="js/classes/garbageHandler.js"></script>
+    <script src="js/classes/playerHandler.js"></script>
+    <script src="js/classes/planetHandler.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>

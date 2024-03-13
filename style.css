@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars */
+    font-family: 'Roboto', sans-serif;
+  }
+
+  h1 {
+    margin: 0;
+  }
+  h3 {
+    margin: 0;
+    font-size: medium;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    overflow: hidden;
+}
+
+#canvas{
+    display: block;
+    background-color: #000;
+}
+
+#scoreDiv {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: white;
+  }
+
+#preGameScreen {
+    height: 100vh;
+    width: 100vw;
+    background-size: 100vw;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.credits {
+    position: absolute;
+    bottom: 20px;
+    right: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: white;
+  }
+
+  .creditsName {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: white;
+  }
+
+  .copyRight {
+    position: absolute;
+    bottom: 1px;
+    right: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: white;
+  }
+
+@media screen and (max-width: 1920px) {
+  #preGameScreen{
+    background-image: url("img/startBackground_mq.png");
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  #preGameScreen{
+    background-image: url("img/startBackground.png");
+  }
+}
+
+#preGameScreen h1 {
+    font-size: 50px;
+}
+
+#preGameScreen p {
+  margin: 1vh;
+}
+
+a.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.gameOverDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(30, 29, 46, 0.671);
+    border-radius: 10px;
+    color: #ffffffd0;
+    padding: 20px;
+    text-align: center;
+  }
+
+.hidden {
+    display: none !important;
+}
