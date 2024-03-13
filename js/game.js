@@ -9,11 +9,7 @@ const highscoreStartSpan = document.getElementById("highscoreStartSpan")
 // highscoreStartSpan.innerHTML = document.cookie
 highscoreStartSpan.innerHTML = localStorage.getItem("highscore")
 
-
-// Server connection
 const socket = io('http://localhost:3000');
-
-socket.emit('customEvent', 'Hello, server!');
 
 
 canvas.width = window.innerWidth;
@@ -290,6 +286,7 @@ function gameOver() {
 }
 
 function startGame() {
+  socket.emit("startGame", "startGame");
   const gameOverScreen = document.querySelector(".gameOverDiv");
   const pregameScreen = document.getElementById("preGameScreen");
   gameOverScreen.classList.add("hidden");

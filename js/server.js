@@ -25,6 +25,12 @@ io.on('connection', (socket) => {
         console.log('Received custom event:', data);
         // Handle the event logic here
     });
+
+    // Handle start game event
+    socket.on('startGame', () => {
+        console.log('Game started');
+        // Start the game logic here
+    });
 });
 
 // Start the server
